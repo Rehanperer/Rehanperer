@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 340" width="100%" height="100%">
+  <defs>
+    <!-- Background Canvas Gradient -->
+    <radialGradient id="meshGradient" cx="50%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#0e1322" />
+      <stop offset="50%" stop-color="#060911" />
+      <stop offset="100%" stop-color="#020306" />
+    </radialGradient>
+
+    <!-- Aurora Glow Gradient -->
+    <linearGradient id="auroraGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25" />
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.15" />
+    </linearGradient>
+
+    <!-- Platinum Metallic Title Gradient -->
+    <linearGradient id="metallicTitle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="35%" stop-color="#f8fafc" />
+      <stop offset="70%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#64748b" />
+    </linearGradient>
+
+    <!-- Laser Line Gradient -->
+    <linearGradient id="laserBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="transparent" />
+      <stop offset="15%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="85%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="transparent" />
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="hyperGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur1" />
+      <feGaussianBlur stdDeviation="20" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="ambientLight" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="60" result="blur" />
+    </filter>
+
+    <!-- Architectural Dot Grid -->
+    <pattern id="dotGrid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="rgba(255, 255, 255, 0.05)" />
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes pulseOrb {
+      0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.15; }
+      50% { transform: scale(1.15) translate(-20px, 10px); opacity: 0.28; }
+    }
+    @keyframes shimmerLaser {
+      0% { opacity: 0.3; stroke-dashoffset: 600; }
+      50% { opacity: 1; }
+      100% { opacity: 0.3; stroke-dashoffset: 0; }
+    }
+    @keyframes nodeGlow {
+      0%, 100% { opacity: 0.4; r: 2; }
+      50% { opacity: 1; r: 3.5; }
+    }
+    @keyframes statusBlink {
+      0%, 100% { opacity: 1; filter: drop-shadow(0 0 6px #38bdf8); }
+      50% { opacity: 0.4; filter: none; }
+    }
+
+    .main-title {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Segoe UI', Roboto, sans-serif;
+      font-weight: 900;
+      font-size: 52px;
+      letter-spacing: -1.5px;
+    }
+    .mono-label {
+      font-family: 'SF Mono', 'Fira Code', 'Roboto Mono', Menlo, monospace;
+      font-size: 11px;
+      letter-spacing: 1.8px;
+    }
+    .sub-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      letter-spacing: 0.3px;
+    }
+    .orb-1 { animation: pulseOrb 10s infinite ease-in-out; }
+    .orb-2 { animation: pulseOrb 12s infinite ease-in-out reverse; }
+    .laser-line {
+      stroke-dasharray: 200, 400;
+      animation: shimmerLaser 6s linear infinite;
+    }
+    .node-dot { animation: nodeGlow 4s infinite ease-in-out; }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="940" height="340" rx="20" fill="url(#meshGradient)" />
+  <rect width="940" height="340" rx="20" fill="url(#dotGrid)" />
+
+  <!-- Ambient Cinematic Light Orbs -->
+  <circle cx="280" cy="110" r="180" fill="#4f46e5" filter="url(#ambientLight)" class="orb-1" />
+  <circle cx="780" cy="180" r="160" fill="#06b6d4" filter="url(#ambientLight)" class="orb-2" />
+  <circle cx="480" cy="280" r="130" fill="#9333ea" filter="url(#ambientLight)" opacity="0.12" />
+
+  <!-- Outer Glassmorphic Border -->
+  <rect x="1" y="1" width="938" height="338" rx="19" fill="none" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.2" />
+
+  <!-- Corner Precision Accents (Architectural Framing) -->
+  <path d="M 20 35 L 20 20 L 35 20" stroke="#38bdf8" stroke-width="1.8" fill="none" opacity="0.7" />
+  <path d="M 920 35 L 920 20 L 905 20" stroke="#38bdf8" stroke-width="1.8" fill="none" opacity="0.7" />
+  <path d="M 20 305 L 20 320 L 35 320" stroke="#818cf8" stroke-width="1.8" fill="none" opacity="0.7" />
+  <path d="M 920 305 L 920 320 L 905 320" stroke="#818cf8" stroke-width="1.8" fill="none" opacity="0.7" />
+
+  <!-- Top Metadata Ribbon -->
+  <g transform="translate(45, 42)">
+    <!-- Pill 1: Agency Affiliation -->
+    <rect x="0" y="0" width="225" height="28" rx="14" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1" />
+    <circle cx="14" cy="14" r="3.5" fill="#38bdf8" style="animation: statusBlink 2.5s infinite;" />
+    <text x="28" y="18" fill="#e2e8f0" class="mono-label" font-weight="700">FOUNDER @ SPIRE DIGITAL</text>
+
+    <!-- Center Coordinates -->
+    <text x="425" y="18" fill="#64748b" class="mono-label" text-anchor="middle">LATENCY: OPTIMAL &bull; ARCHITECTURE: V4.8</text>
+
+    <!-- Pill 2: Availability Status -->
+    <g transform="translate(710, 0)">
+      <rect x="0" y="0" width="140" height="28" rx="14" fill="rgba(56, 189, 248, 0.05)" stroke="rgba(56, 189, 248, 0.25)" stroke-width="1" />
+      <circle cx="14" cy="14" r="3.5" fill="#4ade80" />
+      <text x="26" y="18" fill="#38bdf8" class="mono-label" font-weight="700">OPEN TO CONSULT</text>
+    </g>
+  </g>
+
+  <!-- Hero Typography Section -->
+  <g transform="translate(45, 130)">
+    <!-- Main Full Name -->
+    <text x="0" y="0" fill="url(#metallicTitle)" class="main-title">
+      Rehan Perera
+    </text>
+    
+    <!-- Title Tag Badge -->
+    <g transform="translate(400, -38)">
+      <rect x="0" y="0" width="160" height="22" rx="4" fill="rgba(99, 102, 241, 0.15)" stroke="#6366f1" stroke-width="1" />
+      <text x="80" y="15" fill="#a5b4fc" class="mono-label" text-anchor="middle" font-weight="700">CHIEF ARCHITECT</text>
+    </g>
+  </g>
+
+  <!-- Role Matrix Subtitle -->
+  <g transform="translate(46, 168)">
+    <text x="0" y="0" fill="#94a3b8" class="mono-label" font-weight="600">
+      FULL-STACK ENGINEER <tspan fill="#38bdf8">///</tspan> AI &amp; ML ARCHITECT <tspan fill="#818cf8">///</tspan> CREATIVE TECHNOLOGIST
+    </text>
+  </g>
+
+  <!-- Dynamic Laser Accent Beam -->
+  <line x1="45" y1="195" x2="895" y2="195" stroke="url(#laserBeam)" stroke-width="1.6" class="laser-line" />
+
+  <!-- Value Proposition Paragraph -->
+  <g transform="translate(45, 235)">
+    <text x="0" y="0" fill="#f1f5f9" class="sub-text" font-weight="500">
+      Architecting high-throughput computational backends, intelligent neural pipelines, and world-class digital platforms.
+    </text>
+    <text x="0" y="24" fill="#64748b" class="sub-text">
+      Bridging low-level systems engineering (C, Python) with distributed cloud scales (AWS, Cloudflare) and immersive interfaces.
+    </text>
+  </g>
+
+  <!-- Bottom Visual Pods (3 Core Badges) -->
+  <g transform="translate(45, 290)">
+    <!-- Pod 1 -->
+    <rect x="0" y="0" width="265" height="30" rx="6" fill="rgba(15, 23, 42, 0.6)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+    <circle cx="16" cy="15" r="2.5" fill="#38bdf8" class="node-dot" />
+    <text x="28" y="19" fill="#cbd5e1" class="mono-label">SYSTEMS &amp; INFRASTRUCTURE</text>
+
+    <!-- Pod 2 -->
+    <rect x="290" y="0" width="265" height="30" rx="6" fill="rgba(15, 23, 42, 0.6)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+    <circle cx="306" cy="15" r="2.5" fill="#818cf8" class="node-dot" style="animation-delay: 1.3s;" />
+    <text x="318" y="19" fill="#cbd5e1" class="mono-label">APPLIED NEURAL MODELS</text>
+
+    <!-- Pod 3 -->
+    <rect x="580" y="0" width="270" height="30" rx="6" fill="rgba(15, 23, 42, 0.6)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+    <circle cx="596" cy="15" r="2.5" fill="#c084fc" class="node-dot" style="animation-delay: 2.6s;" />
+    <text x="608" y="19" fill="#cbd5e1" class="mono-label">BESPOKE WEB PLATFORMS</text>
+  </g>
+</svg>

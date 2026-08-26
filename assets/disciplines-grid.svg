@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="discBg" cx="50%" cy="30%" r="90%">
+      <stop offset="0%" stop-color="#0c111e" />
+      <stop offset="60%" stop-color="#060911" />
+      <stop offset="100%" stop-color="#020408" />
+    </radialGradient>
+  </defs>
+
+  <style>
+    .pod-title {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+    }
+    .pod-body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+      font-size: 12px;
+      line-height: 1.5;
+      fill: #94a3b8;
+    }
+    .pod-box {
+      fill: rgba(255, 255, 255, 0.02);
+      stroke: rgba(255, 255, 255, 0.08);
+      stroke-width: 1;
+      rx: 12px;
+    }
+  </style>
+
+  <!-- Pod 1 -->
+  <g transform="translate(0, 0)">
+    <rect width="298" height="200" class="pod-box" />
+    <!-- Accent Line -->
+    <line x1="20" y1="20" x2="60" y2="20" stroke="#38bdf8" stroke-width="2" />
+    <text x="20" y="52" fill="#38bdf8" class="pod-title">01 / SYSTEMS &amp; PERF</text>
+    
+    <text x="20" y="86" class="pod-body">Low-latency backend engineering,</text>
+    <text x="20" y="106" class="pod-body">memory-conscious C logic, and</text>
+    <text x="20" y="126" class="pod-body">high-throughput microservices</text>
+    <text x="20" y="146" class="pod-body">built for mission-critical scale.</text>
+
+    <!-- Bottom Pill -->
+    <rect x="20" y="162" width="130" height="20" rx="4" fill="rgba(56, 189, 248, 0.08)" />
+    <text x="28" y="176" fill="#38bdf8" font-family="'SF Mono', monospace" font-size="10" font-weight="700">C &bull; PYTHON &bull; LINUX</text>
+  </g>
+
+  <!-- Pod 2 -->
+  <g transform="translate(321, 0)">
+    <rect width="298" height="200" class="pod-box" />
+    <line x1="20" y1="20" x2="60" y2="20" stroke="#818cf8" stroke-width="2" />
+    <text x="20" y="52" fill="#818cf8" class="pod-title">02 / APPLIED NEURAL AI</text>
+    
+    <text x="20" y="86" class="pod-body">End-to-end PyTorch deep learning</text>
+    <text x="20" y="106" class="pod-body">pipelines, vector embeddings, and</text>
+    <text x="20" y="126" class="pod-body">autonomous model orchestration</text>
+    <text x="20" y="146" class="pod-body">integrated into production apps.</text>
+
+    <rect x="20" y="162" width="150" height="20" rx="4" fill="rgba(129, 140, 248, 0.08)" />
+    <text x="28" y="176" fill="#818cf8" font-family="'SF Mono', monospace" font-size="10" font-weight="700">PYTORCH &bull; AI PIPELINES</text>
+  </g>
+
+  <!-- Pod 3 -->
+  <g transform="translate(642, 0)">
+    <rect width="298" height="200" class="pod-box" />
+    <line x1="20" y1="20" x2="60" y2="20" stroke="#c084fc" stroke-width="2" />
+    <text x="20" y="52" fill="#c084fc" class="pod-title">03 / CREATIVE PRODUCT</text>
+    
+    <text x="20" y="86" class="pod-body">World-class human interfaces,</text>
+    <text x="20" y="106" class="pod-body">ultra-fluid interactions, and Next.js</text>
+    <text x="20" y="126" class="pod-body">platforms engineered with uncompromising</text>
+    <text x="20" y="146" class="pod-body">typographic &amp; visual rigor.</text>
+
+    <rect x="20" y="162" width="150" height="20" rx="4" fill="rgba(192, 132, 252, 0.08)" />
+    <text x="28" y="176" fill="#c084fc" font-family="'SF Mono', monospace" font-size="10" font-weight="700">NEXT.JS &bull; TS &bull; TAILWIND</text>
+  </g>
+</svg>

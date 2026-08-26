@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 250" width="100%" height="100%">
+  <defs>
+    <radialGradient id="cardBg" cx="30%" cy="20%" r="90%">
+      <stop offset="0%" stop-color="#0c111e" />
+      <stop offset="60%" stop-color="#060911" />
+      <stop offset="100%" stop-color="#020408" />
+    </radialGradient>
+
+    <linearGradient id="glowBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.5" />
+    </linearGradient>
+
+    <filter id="softAura" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="30" result="blur" />
+    </filter>
+  </defs>
+
+  <style>
+    .title-font {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: -0.5px;
+      fill: #ffffff;
+    }
+    .col-title {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .body-font {
+      font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+      font-size: 12.5px;
+      line-height: 1.5;
+      fill: #94a3b8;
+    }
+    .pill-tag {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+  </style>
+
+  <!-- Background Base Card with Frosted Glass Border -->
+  <rect width="940" height="250" rx="16" fill="url(#cardBg)" />
+  <circle cx="850" cy="50" r="100" fill="#6366f1" opacity="0.15" filter="url(#softAura)" />
+  <circle cx="100" cy="200" r="100" fill="#38bdf8" opacity="0.1" filter="url(#softAura)" />
+  <rect x="1" y="1" width="938" height="248" rx="15" fill="none" stroke="url(#glowBorder)" stroke-width="1.2" />
+
+  <!-- Top Header Section -->
+  <g transform="translate(36, 38)">
+    <!-- Main Studio Name -->
+    <text x="0" y="0" class="title-font">SPIRE DIGITAL</text>
+    <text x="175" y="-3" fill="#64748b" font-family="'SF Mono', monospace" font-size="12" letter-spacing="1">/// VENTURE STUDIO &amp; DIGITAL ENGINEERING</text>
+    
+    <!-- Status Badge -->
+    <g transform="translate(730, -18)">
+      <rect x="0" y="0" width="138" height="24" rx="12" fill="rgba(56, 189, 248, 0.08)" stroke="#38bdf8" stroke-width="0.8" />
+      <circle cx="12" cy="12" r="3" fill="#38bdf8" />
+      <text x="24" y="15.5" fill="#38bdf8" class="pill-tag">ACTIVE VENTURE</text>
+    </g>
+  </g>
+
+  <!-- Divider Line -->
+  <line x1="36" y1="58" x2="904" y2="58" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+
+  <!-- 3 Pillar Capability Columns -->
+  <!-- Column 1: Web Platforms -->
+  <g transform="translate(36, 92)">
+    <rect x="0" y="0" width="270" height="130" rx="10" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1" />
+    <text x="16" y="26" fill="#38bdf8" class="col-title">01 / WEB ARCHITECTURE</text>
+    <text x="16" y="52" class="body-font">Bespoke, high-performance web</text>
+    <text x="16" y="70" class="body-font">applications engineered with Next.js,</text>
+    <text x="16" y="88" class="body-font">React, and Edge micro-architectures.</text>
+    
+    <!-- Tags -->
+    <rect x="16" y="102" width="70" height="18" rx="4" fill="rgba(56, 189, 248, 0.1)" />
+    <text x="24" y="114" fill="#38bdf8" class="pill-tag">NEXT.JS</text>
+    <rect x="94" y="102" width="80" height="18" rx="4" fill="rgba(255, 255, 255, 0.05)" />
+    <text x="102" y="114" fill="#cbd5e1" class="pill-tag">FULL-STACK</text>
+  </g>
+
+  <!-- Column 2: Cognitive AI -->
+  <g transform="translate(335, 92)">
+    <rect x="0" y="0" width="270" height="130" rx="10" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1" />
+    <text x="16" y="26" fill="#818cf8" class="col-title">02 / APPLIED AI SYSTEMS</text>
+    <text x="16" y="52" class="body-font">Enterprise LLM workflows, automated</text>
+    <text x="16" y="70" class="body-font">neural data pipelines, vector search,</text>
+    <text x="16" y="88" class="body-font">and intelligent product automation.</text>
+
+    <!-- Tags -->
+    <rect x="16" y="102" width="80" height="18" rx="4" fill="rgba(129, 140, 248, 0.1)" />
+    <text x="24" y="114" fill="#818cf8" class="pill-tag">PYTORCH</text>
+    <rect x="104" y="102" width="90" height="18" rx="4" fill="rgba(255, 255, 255, 0.05)" />
+    <text x="112" y="114" fill="#cbd5e1" class="pill-tag">AI PIPELINES</text>
+  </g>
+
+  <!-- Column 3: Cloud & Edge Scale -->
+  <g transform="translate(634, 92)">
+    <rect x="0" y="0" width="270" height="130" rx="10" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1" />
+    <text x="16" y="26" fill="#c084fc" class="col-title">03 / CLOUD &amp; SCALE</text>
+    <text x="16" y="52" class="body-font">Resilient, low-latency deployment</text>
+    <text x="16" y="70" class="body-font">across AWS, Cloudflare, Docker,</text>
+    <text x="16" y="88" class="body-font">and PostgreSQL infrastructures.</text>
+
+    <!-- Tags -->
+    <rect x="16" y="102" width="55" height="18" rx="4" fill="rgba(192, 132, 252, 0.1)" />
+    <text x="24" y="114" fill="#c084fc" class="pill-tag">AWS</text>
+    <rect x="79" y="102" width="90" height="18" rx="4" fill="rgba(255, 255, 255, 0.05)" />
+    <text x="87" y="114" fill="#cbd5e1" class="pill-tag">CLOUDFLARE</text>
+  </g>
+</svg>
