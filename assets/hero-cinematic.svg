@@ -123,7 +123,7 @@
     <text x="28" y="18" fill="#e2e8f0" class="mono-label" font-weight="700">FOUNDER @ SPIRE DIGITAL</text>
 
     <!-- Center Coordinates -->
-    <text x="425" y="18" fill="#64748b" class="mono-label" text-anchor="middle">LATENCY: OPTIMAL &bull; ARCHITECTURE: V4.8</text>
+    <text x="425" y="18" fill="#64748b" class="mono-label" text-anchor="middle">LATENCY: OPTIMAL • ARCHITECTURE: V4.8</text>
 
     <!-- Pill 2: Availability Status -->
     <g transform="translate(710, 0)">
